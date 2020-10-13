@@ -12,5 +12,10 @@ Criteria for the author to consider viewing your work:<br/>
 -New file (Your own, not adding to someone else's) in "Hacktoberfest Startups"<br/>
 -Username submitted with your work (like an artist's signature)<br/>
 -Code has to actually run in an IDE<br/>
+-Your Username/name added to CONTRIBUTORS.md file in the following format:<br/>
+</br>
+-Name: [YOUR-USERNAME](GitHublink(optional))<br/>
+-Place: [Where are you from?]<br/>
+-Quote: [Something funny, smart, or about yourself!]<br/>
 </br>
 Your PRs will be viewed in the order received, please leave us some time to sort through them as they come. :)
