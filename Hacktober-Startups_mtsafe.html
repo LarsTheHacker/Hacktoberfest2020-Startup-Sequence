@@ -6,10 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
+    html,
     body {
-      height: 100vh;
+      height: 100%;
       margin: 0px;
     }
+
+    .multicolortext {
+      background-image: linear-gradient(to left, violet, indigo, green, blue, yellow, orange, red);
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
 
     #start-button-container {
       display: flex;
@@ -23,96 +33,88 @@
       height: fit-content;
     }
 
-    html,
-    body {
-      height: 100%;
-    }
-
-    .wrap {
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .button {
-      min-width: 300px;
-      min-height: 60px;
-      font-family: 'Nunito', sans-serif;
-      font-size: 22px;
-      text-transform: uppercase;
-      letter-spacing: 1.3px;
-      font-weight: 700;
-      color: #313133;
+    #start-button {
       background: #4FD1C5;
       background: linear-gradient(90deg, rgba(129, 230, 217, 1) 0%, rgba(79, 209, 197, 1) 100%);
       border: none;
       border-radius: 1000px;
       box-shadow: 12px 12px 24px rgba(79, 209, 197, .64);
-      transition: all 0.3s ease-in-out 0s;
+      color: #313133;
       cursor: pointer;
+      font-family: 'Nunito', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 1.3px;
+      min-width: 300px;
+      min-height: 60px;
       outline: none;
       position: relative;
       padding: 10px;
+      text-transform: uppercase;
+      transition: all 0.3s ease-in-out 0s;
     }
 
-    button::before {
-      content: '';
+    #start-button::before {
+      border: 6px solid rgb(160, 185, 255);
       border-radius: 1000px;
-      min-width: calc(300px + 12px);
-      min-height: calc(60px + 12px);
-      border: 6px solid #00FFCB;
       box-shadow: 0 0 60px rgba(0, 255, 203, .64);
+      content: '';
+      left: 50%;
+      min-height: calc(60px + 12px);
+      min-width: calc(300px + 12px);
+      opacity: 0;
       position: absolute;
       top: 50%;
-      left: 50%;
       transform: translate(-50%, -50%);
-      opacity: 0;
       transition: all .3s ease-in-out 0s;
     }
 
-    .button:hover,
-    .button:focus {
+    #start-button:hover,
+    #start-button:focus {
       color: #313133;
       transform: translateY(-6px);
     }
 
-    button:hover::before,
-    button:focus::before {
+    #start-button:hover::before,
+    #start-button:focus::before {
       opacity: 1;
     }
 
-    button::after {
-      content: '';
-      width: 30px;
-      height: 30px;
-      border-radius: 100%;
-      border: 6px solid #00FFCB;
-      position: absolute;
-      z-index: -1;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+    #start-button::after {
       animation: ring 1.5s infinite;
+      border: 6px solid rgb(255, 0, 221);
+      border-radius: 100%;
+      content: '';
+      height: 30px;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 30px;
+      z-index: -1;
     }
 
-    button:hover::after,
-    button:focus::after {
+    #start-button:hover::after,
+    #start-button:focus::after {
       animation: none;
       display: none;
     }
 
+    #start-button-hack {
+      font-size: 28px;
+    }
+
     @keyframes ring {
       0% {
-        width: 30px;
         height: 30px;
         opacity: 1;
+        width: 30px;
       }
 
       100% {
-        width: 300px;
         height: 300px;
         opacity: 0;
+        width: 300px;
       }
     }
   </style>
@@ -120,7 +122,8 @@
 
 <body>
   <div id="start-button-container">
-    <button id="start-button" type="button" onclick="alert('Hello world!')">Click to Startup Hacktoberfest</button>
+    <button id="start-button" type="button" onclick="alert('Hello world!')">Click to Startup<br><span
+        id="start-button-hack" class="multicolortext">Hacktoberfest</span></button>
   </div>
 </body>
 
