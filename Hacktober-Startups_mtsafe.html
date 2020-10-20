@@ -117,6 +117,24 @@
     #hacking-container {
       display: none;
       flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    #hacktoberfest-logo {
+      align-items: center;
+      background-color: none;
+      display: none;
+      height: 100vh;
+      justify-content: center;
+      position: fixed;
+      top: 0px;
+      width: 100vw;
+    }
+
+    #hacktoberfest-logo img {
+      box-shadow: 0px 0px 50px #888888 inset;
+      max-width: 90%;
+      max-height: 90%;
     }
   </style>
 </head>
@@ -181,10 +199,16 @@
     <img src="https://media.tenor.com/images/93b9512e6ba1da2426e49985f679ba8e/tenor.gif" alt="No coffee break typing"
       srcset="">
   </div>
+  <div id="hacktoberfest-logo">
+    <img
+      src="https://hacktoberfest.digitalocean.com/assets/HF-full-logo-b05d5eb32b3f3ecc9b2240526104cf4da3187b8b61963dd9042fdc2536e4a76c.svg"
+      alt="Hacktoberfest Logo" srcset="">
+  </div>
   <script>
     function changeState() {
       document.getElementById("start-button-container").style.display = "none";
       document.getElementById("hacking-container").style.display = "flex";
+      document.getElementById("hacktoberfest-logo").style.display = "flex";
     }
   </script>
 </body>
