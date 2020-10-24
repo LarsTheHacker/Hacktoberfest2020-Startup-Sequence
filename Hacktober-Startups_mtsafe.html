@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hacktoberfest is here. Get this party started right!">
+  <meta name=”robots” content=”index, nofollow”>
+  <title>Hacktoberfest Startup</title>
+  <style>
+    html,
+    body {
+      height: 100%;
+      margin: 0px;
+    }
+
+    .multicolortext {
+      background-image: linear-gradient(to left, violet, indigo, green, blue, yellow, orange, red);
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+
+    #start-button-container {
+      display: flex;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #start-button {
+      background: #4FD1C5;
+      background: linear-gradient(90deg, rgba(129, 230, 217, 1) 0%, rgba(79, 209, 197, 1) 100%);
+      border: none;
+      border-radius: 1000px;
+      box-shadow: 12px 12px 24px rgba(79, 209, 197, .64);
+      color: #313133;
+      cursor: pointer;
+      font-family: 'Nunito', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      height: fit-content;
+      letter-spacing: 1.3px;
+      min-width: 300px;
+      min-height: 60px;
+      outline: none;
+      position: relative;
+      padding: 10px;
+      text-transform: uppercase;
+      transition: all 0.3s ease-in-out 0s;
+    }
+
+    #start-button::before {
+      border: 6px solid rgb(160, 185, 255);
+      border-radius: 1000px;
+      box-shadow: 0 0 60px rgba(0, 255, 203, .64);
+      content: '';
+      left: 50%;
+      min-height: calc(60px + 12px);
+      min-width: calc(300px + 12px);
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      transition: all .3s ease-in-out 0s;
+    }
+
+    #start-button:hover,
+    #start-button:focus {
+      color: #313133;
+      transform: translateY(-6px);
+    }
+
+    #start-button:hover::before,
+    #start-button:focus::before {
+      opacity: 1;
+    }
+
+    #start-button::after {
+      animation: ring 1.5s infinite;
+      border: 6px solid rgb(255, 0, 221);
+      border-radius: 100%;
+      content: '';
+      height: 30px;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 30px;
+      z-index: -1;
+    }
+
+    #start-button:hover::after,
+    #start-button:focus::after {
+      animation: none;
+      display: none;
+    }
+
+    #start-button-hack {
+      font-size: 28px;
+    }
+
+    @keyframes ring {
+      0% {
+        height: 30px;
+        opacity: 1;
+        width: 30px;
+      }
+
+      100% {
+        height: 300px;
+        opacity: 0;
+        width: 300px;
+      }
+    }
+
+    #hacking-container {
+      display: none;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    #hacktoberfest-logo {
+      align-items: center;
+      background-color: none;
+      display: none;
+      height: 100vh;
+      justify-content: center;
+      position: fixed;
+      top: 0px;
+      width: 100vw;
+    }
+
+    #hacktoberfest-logo img {
+      box-shadow: 0px 0px 50px #888888 inset;
+      max-width: 90%;
+      max-height: 90%;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="start-button-container">
+    <button id="start-button" type="button" onclick="changeState()">Click to Startup<br><span id="start-button-hack"
+        class="multicolortext">Hacktoberfest</span></button>
+  </div>
+  <div id="hacking-container">
+    <img src="https://media.tenor.com/images/a6e37c08e0672e32500a805c53059f39/tenor.gif" alt="gray cat typing fast"
+      srcset="">
+    <img src="https://media.tenor.com/images/bb06bbd5166b5617785ea6f1876aa62c/tenor.gif" alt="Jim Carey typing fast"
+      srcset="">
+    <img src="https://media.tenor.com/images/2b5d7e2114475bad016189a4ad9aa6f4/tenor.gif" alt="Felicity at keyboard"
+      srcset="">
+    <img src="https://media.tenor.com/images/1d60ee0d9ba7e6a1bdd1b473007fa733/tenor.gif"
+      alt="Kermit the Frog types on an old typewriter" srcset="">
+    <img src="https://media.tenor.com/images/d1149c3b6cbfa2886d3bcf643ebe281a/tenor.gif"
+      alt="Peter Griffin keyboards with long nails" srcset="">
+    <img src="https://media.tenor.com/images/dbd9cca5408eb8f585c3ce519cf0c275/tenor.gif"
+      alt="cat wearing a blue shirt typing fast" srcset="">
+    <img src="https://media.tenor.com/images/5c6db3619bf771d34baa97a503856c7b/tenor.gif" alt="Jay Versace typing fast"
+      srcset="">
+    <img src="https://media.tenor.com/images/988b3ba27266cf521f405c23495609e9/tenor.gif" alt="Maniguis typing"
+      srcset="">
+    <img src="https://media.tenor.com/images/c73a99c691bdc841e78a408608fb47e8/tenor.gif" alt="Unbothered typing"
+      srcset="">
+    <img src="https://media.tenor.com/images/f18ea52779a3cf70ba975fd6e62dfcc8/tenor.gif" alt="Dog typing in bed"
+      srcset="">
+    <img src="https://media.tenor.com/images/0799eab3543505117564825efcc03ef3/tenor.gif" alt="Black cat typing"
+      srcset="">
+    <img src="https://media.tenor.com/images/b04a463906cd656df1654ab3dadb5420/tenor.gif" alt="Dee Dee typing" srcset="">
+    <img src="https://media.tenor.com/images/1b8566313b6f8a51ac7fc95d51a58227/tenor.gif" alt="Kip Napoleon typing"
+      srcset="">
+    <img src="https://media.tenor.com/images/04ad1e7d566d90030ffb764997ee3216/tenor.gif" alt="Spike Monkey typing"
+      srcset="">
+    <img src="https://media.tenor.com/images/a79a392b9a44ff7756424384f5b1972d/tenor.gif" alt="Typing Petty" srcset="">
+    <img src="https://media.tenor.com/images/3706ffb65a69abc1fb78b7337f4cfbfe/tenor.gif" alt="Dog typing" srcset="">
+    <img src="https://media.tenor.com/images/9cbca169a823aa48d253c1740882230e/tenor.gif" alt="Pink cat typing"
+      srcset="">
+    <img src="https://media.tenor.com/images/836f75d4e0be9b117c1997c97cb624c7/tenor.gif" alt="Sloth typing" srcset="">
+    <img src="https://media.tenor.com/images/a05be49efbced2dd4f99c83db492c3be/tenor.gif" alt="American Dad typing"
+      srcset="">
+    <img src="https://media.tenor.com/images/9987690a082c74dc5fb885d3012c7c31/tenor.gif" alt="Kl7 typing" srcset="">
+    <img src="https://media.tenor.com/images/8d626b227ee7d1e3233ccf77abeee4f4/tenor.gif" alt="Tyra Banks typing"
+      srcset="">
+    <img src="https://media.tenor.com/images/812743f16d147a1f240f26c7613bc08a/tenor.gif" alt="Robin Williams typing"
+      srcset="">
+    <img src="https://media.tenor.com/images/76a8c0986f93f77916eecfba0bd8dd43/tenor.gif" alt="Coraline's Dad typing"
+      srcset="">
+    <img src="https://media.tenor.com/images/e7371eabd23ff2898c9687b0854111fe/tenor.gif" alt="Kyle typing" srcset="">
+    <img src="https://media.tenor.com/images/0b29b3c8f66da8523b4d5dc5100e04d6/tenor.gif" alt="Dude typing" srcset="">
+    <img src="https://media.tenor.com/images/673bce1bbf76d4253613cc3c01f02b7f/tenor.gif" alt="Ferocia typing" srcset="">
+    <img src="https://media.tenor.com/images/71898cf268d8546defb79fe833da5cfa/tenor.gif" alt="Snooki typing" srcset="">
+    <img src="https://media.tenor.com/images/4f939aa62b3936ad3779c786c844776f/tenor.gif" alt="Uyen Ho typing" srcset="">
+    <img src="https://media.tenor.com/images/46ed2df3dfb5810b9d7e79c06b7810cc/tenor.gif" alt="Maris Rascal typing"
+      srcset="">
+    <img src="https://media.tenor.com/images/8238aed709ec43a7fca5aa4155cebaa3/tenor.gif" alt="Dogman typing" srcset="">
+    <img src="https://media.tenor.com/images/517380b24996cf4173edb441dbc0637d/tenor.gif" alt="Reboot typing" srcset="">
+    <img src="https://media.tenor.com/images/0dbe18ae3c9f941972b9ed19b5211cba/tenor.gif" alt="Bender typing" srcset="">
+    <img src="https://media.tenor.com/images/93b9512e6ba1da2426e49985f679ba8e/tenor.gif" alt="No coffee break typing"
+      srcset="">
+  </div>
+  <div id="hacktoberfest-logo">
+    <img
+      src="https://hacktoberfest.digitalocean.com/assets/HF-full-logo-b05d5eb32b3f3ecc9b2240526104cf4da3187b8b61963dd9042fdc2536e4a76c.svg"
+      alt="Hacktoberfest Logo" srcset="">
+  </div>
+  <script>
+    function changeState() {
+      document.getElementById("start-button-container").style.display = "none";
+      document.getElementById("hacking-container").style.display = "flex";
+      document.getElementById("hacktoberfest-logo").style.display = "flex";
+    }
+  </script>
+</body>
+
+</html>
