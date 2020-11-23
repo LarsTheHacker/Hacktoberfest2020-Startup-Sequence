@@ -1,0 +1,53 @@
+div{
+	color: #93c2db;
+    background: #9c4668;
+	
+	text-align: center;
+	width: 300px;
+	height: 150px;
+	border-radius: 6px;
+	transition-property: color, width, background, border-radius;
+	transition-duration: .5s;
+	transition-timing-function: linear;
+	transition-delay: .5s;
+    margin: auto;
+	margin-bottom: 3%;
+    margin-top: 1%;
+}
+
+div:hover{
+	color: #93c2db;
+	width: 300px;
+	height: 150px;
+	background: #072540;
+	border-radius: 50%;
+	/*padding: 3%;*/
+}
+
+div:active{
+	color: #93c2db;
+	width: 200px;
+	background: #ff8ae2;
+}
+
+div{
+	position: relative;
+	border: 3px solid #000000;
+}
+
+h1,h2 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+h1, h2{
+	position: relative;
+    font-size: 25px;
+    padding-top: 10%;
+
+}
